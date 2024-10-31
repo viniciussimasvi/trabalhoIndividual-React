@@ -1,0 +1,19 @@
+.cabecalho{
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    background-color: rgb(27, 110, 227);
+    border-radius:  0px 0px 10px 10px;
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.cabelhaco h1{
+    padding-left: 10px;
+}
+.cabecalho img{
+    height: 4rem;
+    padding-bottom: 10px;
+    padding-right: 30px;
+}
+
