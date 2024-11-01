@@ -1,14 +1,26 @@
-#root{
-    display: flex;
-    flex-direction: column;
-    
+html, body,#root {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
+div.container-fluid {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 0;
+  padding-right: 0;
+  height: 100vh;
+}
 
-
+form{
+    margin-left: 5rem;
+    margin-right: 5rem ;
+}

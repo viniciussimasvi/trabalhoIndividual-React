@@ -1,0 +1,10 @@
+.resultado{
+    display: flex;
+    justify-content: center;
+    border: solid 1px black;
+    padding: 0.7rem;
+    border-radius: 5px;
+    margin-top: 3rem;
+    margin-left: 15rem;
+    margin-right: 15rem;
+}

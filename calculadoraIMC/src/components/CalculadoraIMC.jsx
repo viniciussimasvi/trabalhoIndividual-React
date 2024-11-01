@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import logo from "../assets/logo.png";
+import "./Footer.css";
+import "./Resultado.css";
+import "./Header.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./main.css";
 
 export default function CalculadoraIMC() {
   const [peso, setPeso] = useState();
@@ -35,49 +38,63 @@ export default function CalculadoraIMC() {
   }
 
   return (
-    <div className="container">
+    <div className="container-fluid">
+      <header className="cabecalho">
+        <img src={logo} alt="logo" />
+        <h1>Calculadora IMC</h1>
+      </header>
+
       <form onSubmit={calcularIMC}>
         <div className="row">
           <div className="col-md-6">
-            <label htmlFor="nome">
+            <label htmlFor="peso">
               <b>Peso:</b>
             </label>
             <input
               id="peso"
               type="text"
               name="peso"
-              placeholder="Digite seu peso"
               className="my-3 form-control"
+              placeholder="Digite seu peso"
               onChange={(e) => setPeso(e.target.value)}
               required
             />
           </div>
 
           <div className="col-md-6">
-            <label htmlFor="email">
+            <label htmlFor="altura">
+              {" "}
               <b>Altura:</b>
             </label>
             <input
               id="altura"
               type="text"
               name="altura"
-              placeholder="Digite sua altura (com ponto flutuante)"
               className="my-3 form-control"
+              placeholder="Digite sua altura (com ponto flutuante)"
               onChange={(e) => setAltura(e.target.value)}
               required
             />
           </div>
         </div>
+
         <div className="d-grid">
           <button type="submit" className="btn btn-primary btn-lg btn-block">
             Calcular
           </button>
         </div>
+
+        <p className="resultado">
+          <b>Resultado </b>: {texto}
+        </p>
       </form>
-      <p>
-        <b>Resultado: </b>
-        {texto}
-      </p>
+
+      <footer className="rodape">
+        <p>
+          &copy; Desenvolvido por Vinícius Simas Vimercati| React | Residência
+          TIC/Software - Serratec 2024.2
+        </p>
+      </footer>
     </div>
   );
 }
